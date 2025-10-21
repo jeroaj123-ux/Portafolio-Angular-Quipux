@@ -28,6 +28,6 @@ Visualización de más de 100 Pokémon con imágenes y detalles.
 
 Diseño inspirado en videojuegos, con colores y estilo Zelda.
 
-Interfaz responsive, adaptable a cualquier dispositivo.
+IMPORTANTE: Este portafolio aun no esta listo para ser visto desde celular.
 
 Animaciones y efectos visuales para hacer la experiencia más dive
