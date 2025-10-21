@@ -1,16 +1,7 @@
-/* ============================================================
-   🎯 THE LEGEND OF ZELDA: BREATH OF THE WILD THEME (OPTIMIZED)
-   ============================================================ */
-
-/* === IMPORTS === */
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
-/* === FONTS (añadidas desde index.html) ===
-<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-*/
 
-/* === GLOBAL === */
 body {
   margin: 0;
   min-height: 100vh;
@@ -21,7 +12,6 @@ body {
   position: relative;
 }
 
-/* === AURORA BACKGROUND === */
 body::before {
   content: "";
   position: fixed;
@@ -41,7 +31,6 @@ body::before {
   100% { background-position: 0% 0%, 50% 50%, 100% 100%; }
 }
 
-/* === FLOATING LIGHT PARTICLES === */
 .lights-container {
   position: fixed;
   inset: 0;
@@ -67,7 +56,6 @@ body::before {
   100% { transform: translateY(0) translateX(-30px) scale(1); opacity: 0.7; }
 }
 
-/* === TITLES === */
 h1, h2, h3, h4 {
   color: #3e2f1c;
   text-shadow: 0 0 10px #f4e0a6;
@@ -75,7 +63,6 @@ h1, h2, h3, h4 {
   font-family: 'Cinzel Decorative', serif;
 }
 
-/* === CARDS === */
 .card {
   background: rgba(255, 255, 255, 0.65);
   border: 1px solid rgba(255, 240, 200, 0.3);
@@ -91,7 +78,6 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 30px rgba(255, 240, 200, 0.4);
 }
 
-/* === BUTTONS (Sheikah vibe) === */
 .btn-zelda {
   background: linear-gradient(90deg, #caa75b, #f2d68e);
   border: none;
@@ -111,7 +97,6 @@ h1, h2, h3, h4 {
   transform: scale(1.05);
 }
 
-/* === FORM ELEMENTS === */
 input, select, textarea, button {
   border: 1px solid rgba(180, 150, 90, 0.4);
   border-radius: 8px;
@@ -127,13 +112,11 @@ input:focus, select:focus, textarea:focus {
   outline: none;
 }
 
-/* === FIX: evita que el fondo tape los clics === */
 main, header, footer {
   position: relative;
   z-index: 2;
 }
 
-/* === FLOATING ANIMATION === */
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-5px); }

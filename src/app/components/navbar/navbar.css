@@ -1,4 +1,3 @@
-/* --- Navbar Zelda style --- */
 .navbar {
   background: linear-gradient(90deg, rgba(120, 90, 50, 0.25), rgba(220, 180, 100, 0.25));
   backdrop-filter: blur(10px);
@@ -23,7 +22,6 @@
   text-shadow: 0 0 10px #e0c17d, 0 0 20px #f8e3a0;
 }
 
-/* --- Enlace activo (brillo Zelda) --- */
 .navbar a.active-link {
   color: #ffe58a !important;
   text-shadow: 0 0 8px #ffe58a, 0 0 20px #ffdc73;

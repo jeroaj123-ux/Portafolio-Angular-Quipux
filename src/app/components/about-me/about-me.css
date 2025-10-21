@@ -1,4 +1,3 @@
-/* === About Me Section === */
 .about-hero {
   display: flex;
   align-items: center;
@@ -71,7 +70,6 @@
   transform: scale(1.05);
 }
 
-/* === Image Section === */
 .about-image img {
   width: 600px;
   height: auto;
@@ -80,7 +78,6 @@
   filter: drop-shadow(0 0 25px #ffef9f);
 }
 
-/* === Responsive === */
 @media (max-width: 900px) {
   .about-hero {
     flex-direction: column-reverse;
