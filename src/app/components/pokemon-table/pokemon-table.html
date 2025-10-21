@@ -1,0 +1,37 @@
+<div class="pokemon-container">
+  <h1>Pokémons</h1>
+
+  <p>Los tipos de cada pokemon salen en ingles ya que el servicio asi los trae.</p>
+
+  <div class="input-section">
+    <label for="search">Buscar por nombre:</label>
+    <input id="search" [(ngModel)]="searchTerm" name="searchTerm" type="text"
+           class="form-control mb-4" placeholder="Ejemplo: pikachu">
+
+    <button (click)="buscarPorNombre()" class="form-control btn btn-warning mb-5">
+      Buscar Pokémon
+    </button>
+
+    <hr>
+
+    <label for="limit">Límite:</label>
+    <input id="limit" [(ngModel)]="limit" name="limit" type="number" class="form-control mb-4">
+
+    <label for="offset">Item inicial:</label>
+    <input id="offset" [(ngModel)]="offset" name="offset" type="number" class="form-control mb-5">
+
+    <button (click)="buscarPokemons()" class="form-control btn btn-primary mb-5">
+      Consultar información
+    </button>
+  </div>
+
+  <div class="table-section" *ngIf="pokemons !== null">
+    <div class="pokemon-card" *ngFor="let pokemon of pokemons">
+      <img [src]="pokemon.image" [alt]="pokemon.name">
+      <h3>{{ pokemon.name | titlecase }}</h3>
+      <p class="type">Tipo: {{ pokemon.type }}</p>
+    </div>
+  </div>
+
+  <p *ngIf="pokemons === null">Acá va a estar la tabla de Pokémons consultados</p>
+</div>

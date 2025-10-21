@@ -1,0 +1,18 @@
+<div class="game-container">
+  <h1 class="game-title"> Clickea al Korok </h1>
+  <p>Este juego es un extra nada mas por si quieres divertirte, clickealo tantas veces puedas, solo es eso.</p>
+  <p>Hay sorpresa si llegas a los 50 clicks.</p>
+  <p class="game-message">{{ message }}</p>
+  <p class="score">Puntuación: {{ score }}</p>
+
+  <div class="korok-area">
+    <img
+      src="korok.png"
+      alt="Korok"
+      class="korok"
+      [style.left.%]="korokLeft"
+      [style.top.%]="korokTop"
+      (click)="moveKorok()"
+    />
+  </div>
+</div>

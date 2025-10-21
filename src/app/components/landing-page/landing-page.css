@@ -1,0 +1,133 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 10%;
+  background: radial-gradient(circle at center, rgba(20, 25, 30, 0.95), #0c1014);
+  color: #fff8e7;
+  isolation: isolate;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 3rem;
+  text-shadow: 0 0 15px #e8c86e, 0 0 40px #ffe58a;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #e8e0b8;
+  letter-spacing: 1px;
+}
+
+.hero-buttons {
+  margin-top: 25px;
+}
+
+/* --- Botones Zelda personalizados (solo los que usan la clase) --- */
+.btn-zelda,
+.btn-zelda-outline {
+  text-decoration: none;
+  padding: 10px 25px;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.btn-zelda {
+  background: linear-gradient(90deg, #c6a853, #f0d67c);
+  color: #3e2f1c;
+  box-shadow: 0 0 20px rgba(255, 220, 130, 0.4);
+  border: none;
+}
+
+.btn-zelda:hover {
+  box-shadow: 0 0 30px #ffe58a, 0 0 60px #f8e3a0;
+}
+
+.btn-zelda-outline {
+  border: 2px solid #c6a853;
+  color: #f7e8b4;
+  background: transparent;
+}
+
+.btn-zelda-outline:hover {
+  background: rgba(255, 248, 231, 0.1);
+  text-shadow: 0 0 10px #ffe58a;
+}
+
+/* --- Imagen Trifuerza --- */
+.hero-image img {
+  width: 220px;
+  filter: drop-shadow(0 0 25px #ffef9f);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* --- Sección de Cartas --- */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px 10%;
+  background: #10151b;
+}
+
+.card-zelda {
+  background: rgba(255, 248, 231, 0.05);
+  border: 1px solid rgba(255, 230, 180, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #f8eebc;
+  box-shadow: 0 0 10px rgba(255, 220, 130, 0.1);
+}
+
+.card-zelda:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 220, 130, 0.4);
+}
+
+/* --- Stats doradas --- */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: linear-gradient(90deg, rgba(20, 25, 30, 0.9), #1b1f25);
+  padding: 60px 0;
+}
+
+.stat-box {
+  background: rgba(255, 230, 150, 0.08);
+  border: 1px solid rgba(255, 230, 180, 0.4);
+  border-radius: 10px;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 220, 130, 0.3);
+}
+
+.stat-box h2 {
+  color: #ffe58a;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.stat-box p {
+  color: #e8e0b8;
+  font-weight: bold;
+}

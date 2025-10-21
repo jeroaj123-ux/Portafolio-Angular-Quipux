@@ -1,0 +1,48 @@
+.footer-zelda {
+  background: linear-gradient(180deg, rgba(20, 25, 30, 0.9), #1b1f25);
+  color: #f8eebc;
+  text-align: center;
+  padding: 50px 20px 20px;
+  border-top: 2px solid rgba(255, 230, 150, 0.3);
+  box-shadow: 0 -4px 20px rgba(255, 220, 130, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.footer-title {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 1.8rem;
+  color: #ffe58a;
+  text-shadow: 0 0 15px #ffe58a;
+  margin-bottom: 10px;
+}
+
+.footer-text {
+  font-size: 1rem;
+  color: #f4f1df;
+  margin-bottom: 25px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-icon {
+  font-size: 1.8rem;
+  color: #f8eebc;
+  transition: all 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #ffe58a;
+  text-shadow: 0 0 10px #ffe58a, 0 0 20px #fff2b0;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #b8b6a5;
+}

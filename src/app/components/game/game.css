@@ -1,0 +1,45 @@
+.game-container {
+  text-align: center;
+  height: 100vh;
+  background: radial-gradient(circle at center, rgba(20,25,30,0.95), #0c1014);
+  color: #fff8e7;
+  font-family: 'Cinzel Decorative', serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.game-title {
+  font-size: 2.5rem;
+  margin-top: 40px;
+  text-shadow: 0 0 15px #e8c86e, 0 0 30px #ffe58a;
+}
+
+.game-message {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #e8e0b8;
+}
+
+.score {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffe58a;
+}
+
+.korok-area {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+}
+
+.korok {
+  position: absolute;
+  width: 80px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 15px #ffef9f);
+}
+
+.korok:hover {
+  transform: scale(1.2);
+}

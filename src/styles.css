@@ -1,1 +1,144 @@
-/* You can add global styles to this file, and also import other style files */
+/* ============================================================
+   🎯 THE LEGEND OF ZELDA: BREATH OF THE WILD THEME (OPTIMIZED)
+   ============================================================ */
+
+/* === IMPORTS === */
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+/* === FONTS (añadidas desde index.html) ===
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+*/
+
+/* === GLOBAL === */
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Nunito Sans', sans-serif;
+  color: #fefdf9;
+  background: linear-gradient(180deg, #b6d3d6 0%, #a2c2b0 60%, #e7dfc6 100%);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* === AURORA BACKGROUND === */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.15), transparent 60%),
+    radial-gradient(circle at 80% 80%, rgba(255, 240, 180, 0.2), transparent 70%),
+    radial-gradient(circle at 50% 100%, rgba(255, 210, 120, 0.15), transparent 60%);
+  animation: skyMove 60s ease-in-out infinite alternate;
+  z-index: -2; /* detrás del contenido */
+  pointer-events: none; /* 🔧 Evita bloquear clics */
+}
+
+@keyframes skyMove {
+  0% { background-position: 0% 0%, 50% 50%, 100% 100%; }
+  50% { background-position: 80% 20%, 30% 60%, 0% 80%; }
+  100% { background-position: 0% 0%, 50% 50%, 100% 100%; }
+}
+
+/* === FLOATING LIGHT PARTICLES === */
+.lights-container {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none; /* 🔧 No interfiere con botones o inputs */
+  z-index: -1;
+}
+
+.light-particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: radial-gradient(circle, rgba(255,255,200,0.9) 0%, rgba(255,255,200,0.1) 70%);
+  border-radius: 50%;
+  animation: floatLight 12s ease-in-out infinite;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(255,255,200,0.7), 0 0 20px rgba(255,255,200,0.3);
+}
+
+@keyframes floatLight {
+  0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.8; }
+  50% { transform: translateY(-100px) translateX(30px) scale(1.2); opacity: 1; }
+  100% { transform: translateY(0) translateX(-30px) scale(1); opacity: 0.7; }
+}
+
+/* === TITLES === */
+h1, h2, h3, h4 {
+  color: #3e2f1c;
+  text-shadow: 0 0 10px #f4e0a6;
+  font-weight: 700;
+  font-family: 'Cinzel Decorative', serif;
+}
+
+/* === CARDS === */
+.card {
+  background: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(255, 240, 200, 0.3);
+  box-shadow: 0 6px 20px rgba(80, 70, 40, 0.2);
+  border-radius: 15px;
+  transition: 0.4s;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(255, 240, 200, 0.4);
+}
+
+/* === BUTTONS (Sheikah vibe) === */
+.btn-zelda {
+  background: linear-gradient(90deg, #caa75b, #f2d68e);
+  border: none;
+  color: #3e2f1c;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(255, 230, 180, 0.5);
+  cursor: pointer;
+  position: relative;
+  z-index: 2; /* 🔧 asegura que quede encima de efectos */
+}
+
+.btn-zelda:hover {
+  background: linear-gradient(90deg, #f2d68e, #ffeab8);
+  box-shadow: 0 0 25px rgba(255, 230, 180, 0.8);
+  transform: scale(1.05);
+}
+
+/* === FORM ELEMENTS === */
+input, select, textarea, button {
+  border: 1px solid rgba(180, 150, 90, 0.4);
+  border-radius: 8px;
+  background-color: rgba(255,255,255,0.8);
+  color: #3e2f1c;
+  z-index: 2;
+  position: relative;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #caa75b;
+  box-shadow: 0 0 10px rgba(255, 230, 180, 0.6);
+  outline: none;
+}
+
+/* === FIX: evita que el fondo tape los clics === */
+main, header, footer {
+  position: relative;
+  z-index: 2;
+}
+
+/* === FLOATING ANIMATION === */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.card, .btn-zelda {
+  animation: float 6s ease-in-out infinite;
+}
